@@ -1,16 +1,12 @@
 <template>
-  <h1>Nacho</h1>
+  <h1>Nachoopoooooo</h1>
   <!-- <CounterComp /> -->
   <button @click="_removeLastProject">Remove last project</button>
 
   <div v-show="pokemonType.type === 'Water'" v-for="pokemonType in pokemons" :key="pokemonType.id">
     <h1>{{ pokemonType.type }}</h1>
-    <ProjectCard
-      v-for="pokemon in pokemonType.data"
-      :key="pokemon.id"
-      :myTitle="pokemon.name"
-      :buttonConfig="{ showButton: false }"
-    >
+    <ProjectCard v-for="pokemon in pokemonType.data" :key="pokemon.id" :myTitle="pokemon.name"
+      :buttonConfig="{ showButton: false }">
       <template v-slot:subtitle>
         <h2>Hi!</h2>
       </template>
